@@ -1,0 +1,289 @@
+<role>Act as an experienced prompt engineer. Do not soften feedback.</role>
+
+<context>
+I have a big task to do and I want you to review my prompts and help me improve them.
+
+Use the Anthropic Skilljar prompting course as your reference for what good prompts look like, and adapt your advice to the specifics of this project.
+
+You will see that I have numbered the prompts. I split the work this way because the task is too big for a single prompt — I want a workflow of smaller steps. I will run each prompt separately, in its own chat. I will paste a summary of the previous prompt's output into the next one when needed.
+
+At the end of the workflow, I will run a final summary prompt that produces, for each step, a Problem / Solution / Decisions recap. To support that, every prompt below ends with the same instruction: once I approve the final answer, the model should output a Problem / Solution / Decisions summary for that step.
+
+Context about my task:
+I am a junior developer with a current CV. I want to create a new CV that is better and more optimised than the old one. Examples of changes I want to make: rewrite the profile summary, rewrite the internship description, change the format because I built it in Canva (which is bad for ATS), remove dates that could bias recruiters, produce a French version and an English version, and make the whole thing ATS-optimised.
+</context>
+
+<task>
+1. Before analysing anything, think about what I am asking. Ask me your questions first.
+2. Read everything I wrote so you can give constructive criticism with full understanding of the project.
+3. Review each numbered prompt below. For each one, tell me:
+   - Whether it is prompted correctly.
+   - Whether anything is missing.
+   - Whether anything could be improved.
+   - How it compares to the Anthropic Skilljar course recommendations and whether there is a better way to do it.
+</task>
+
+
+<prompt_1>
+<role>Act as a senior software developer who has built and reviewed many CVs and knows the ATS landscape well. Be direct and critical — do not soften feedback.</role>
+
+<context>
+I am a junior software developer. I have attached my current CV.
+
+I currently build my CVs in Canva. The problem is that Canva exports image-based PDFs that ATS systems cannot read, and the layout is hard to modify precisely. I need a tool that produces a clean, ATS-friendly, single-page CV that I can easily update. I am a developer and I am comfortable writing code.
+
+I want help deciding which tool to use to create my new CV.
+</context>
+
+<task>
+1. Recommend the 3 best tools for my case. For each of the 3, explain why it is among the best.
+
+   Then, out of those 3, pick the single one you consider the best fit for me and explain why. I will make the final choice after reading your reasoning.
+
+2. As a junior, I currently use a single CV for every job I apply to. Is it better to maintain a job-tailored CV instead? My intuition is that as a junior it is better to show all my skills, because a role-specific CV would look empty given my limited experience. Tell me your opinion and be critical.
+
+Once I approve your final answer, output a summary for this step with three fields:
+- Problem: what was the problem this prompt addressed.
+- Solution: the final solution I chose.
+- Decisions: why I chose this solution, and which alternatives were dropped and why.
+</task>
+</prompt_1>
+
+
+<prompt_2>
+<role>Act as an experienced technical recruiter and HR professional specialising in the Belgian tech market. Be direct and critical — do not soften feedback.</role>
+
+<context>
+I am a junior software developer targeting these roles in Belgium: software developer, fullstack developer, backend developer, analyst-developer, and support / tester.
+
+I have attached my current CV. Read it carefully.
+
+I want to create a new CV. Before I do, I need you to be critical about the content of my current CV — not its visual design — and tell me everything that is wrong with it.
+</context>
+
+<task>
+1. Perform a 10-second recruiter pass on my CV and tell me what stands out — good and bad — in those first 10 seconds. This is the most important part of the audit.
+
+2. Then perform a deeper content audit. For each issue you find, output a triple:
+   - Problem:
+   - Why it matters:
+   - Concrete fix:
+
+3. Tell me what important content is missing from the CV.
+
+Once I approve your final answer, output a summary for this step with three fields:
+- Problem: what was the problem this prompt addressed.
+- Solution: the final solution I chose.
+- Decisions: why I chose this solution, and which alternatives were dropped and why.
+</task>
+</prompt_2>
+
+
+<prompt_3a>
+<role>Act as a professional CV writer who specialises in tech profiles and knows how to position self-directed learning on a junior developer's CV. Be direct and critical — do not soften feedback.</role>
+
+<context>
+I am a junior software developer targeting these roles in Belgium: software developer, fullstack developer, backend developer, analyst-developer, and support / tester.
+
+I have attached my current CV (English version). Read it.
+
+I have completed the following free Anthropic Skilljar courses:
+- Claude 101
+- Claude Code 101
+- Claude Code in Action
+- AI Fluency: Framework & Foundations
+- Building with the Claude API
+- Introduction to Model Context Protocol
+- Model Context Protocol: Advanced Topics
+- Introduction to Agent Skills
+- Introduction to Subagents
+
+I want to add this learning to my CV in a way that highlights my interest in AI and shows the concrete skills I gained.
+
+I am unsure whether I should list every course individually on the CV, or instead write a single summary that describes what I learned overall. I want a single firm recommendation from you — do not hedge.
+
+The output of this prompt will not modify my CV directly. I will use your text to build the new CV later.
+</context>
+
+<task>
+1. Give me one firm recommendation: list every course individually, or write a single summary block. Explain your reasoning. Do not propose both.
+
+2. Based on your recommendation, produce:
+   - A short title for this section or entry on the CV.
+   - The corresponding text (either the list framing or the summary), written in strong, ATS-friendly language.
+
+Once I approve your final answer, output a summary for this step with three fields:
+- Problem: what was the problem this prompt addressed.
+- Solution: the final solution I chose.
+- Decisions: why I chose this solution, and which alternatives were dropped and why.
+</task>
+</prompt_3a>
+
+
+<prompt_3b>
+<role>Act as an experienced technical recruiter and HR professional specialising in the Belgian tech market. Be direct and critical — do not soften feedback.</role>
+
+<context>
+I am a junior software developer. I have attached my current CV (English version). Read it, including my existing profile summary.
+
+I want a rewritten profile summary that is ATS-optimised, uses strong language, and conveys my interest in AI and modern tech stacks.
+
+The output of this prompt will not modify my CV directly. I will use your text to build the new CV later.
+</context>
+
+<task>
+Rewrite my profile summary in English. It must be ATS-optimised and use strong, active language. It must also reflect my interest in AI.
+
+Once I approve your final answer, output a summary for this step with three fields:
+- Problem: what was the problem this prompt addressed.
+- Solution: the final solution I chose.
+- Decisions: why I chose this solution, and which alternatives were dropped and why.
+</task>
+
+</prompt_3b>
+
+
+<prompt_3c>
+<role>Act as an experienced technical recruiter and HR professional specialising in the Belgian tech market. Be direct and critical — do not soften feedback.</role>
+
+<context>
+I am a junior software developer. I have attached my current CV (English version). Read the internship section.
+
+I want a rewritten internship description that uses action verbs and shows measurable impact. It should also reflect my interest in AI where this is honest and relevant.
+
+The output of this prompt will not modify my CV directly. I will use your text to build the new CV later.
+</context>
+
+<task>
+Rewrite my internship description in English, using action verbs and quantified or measurable impact wherever possible.
+
+Once I approve your final answer, output a summary for this step with three fields:
+- Problem: what was the problem this prompt addressed.
+- Solution: the final solution I chose.
+- Decisions: why I chose this solution, and which alternatives were dropped and why.
+</task>
+</prompt_3c>
+
+
+<prompt_4>
+<role>Act as an experienced technical recruiter and HR professional specialising in the Belgian tech market. Be direct and critical — do not soften feedback.</role>
+
+<context>
+I am a junior software developer. I have attached my current CV in both French and English versions. Read both.
+
+I want to create a new CV from scratch using this tool : read the xml tag named 'prompt_1_result'.
+
+I need the new CV in both English and French, but we will start with the English version. Once the English version is finished, you will produce the French version, using my existing French CV as the source for French-specific wording.
+
+The roles I target are: software developer, fullstack developer, backend developer, analyst-developer, and support / tester. Optimise the keywords throughout the CV for these roles.
+
+Use my current CV as the source of truth for facts about me (employers, dates, tools, responsibilities). Use the English CV when building the English version, and the French CV when building the French version.
+
+Do not invent any facts. If something needed for a strong CV is missing from my current CV, insert a `[TO FILL]` marker instead of fabricating content.
+
+If a section in my current CV is weak and you believe it should be cut or demoted, do so — but explicitly flag what you removed and why, so I can confirm.
+
+I have already identified the following problems with my current CV, each paired with the correction to apply: read the xml tag named 'prompt_2_result'.
+
+In addition, apply the following changes to the new CV:
+- Add this section about my Anthropic Skilljar courses: read the xml tag named 'prompt_3_A_result'
+- Replace my profile summary with this: read the xml tag named 'prompt_3_B_result'
+- Replace my internship description with this: read the xml tag named 'prompt_3_C_result'
+
+Personal data to keep exactly as on the current CV: first name, last name, phone number, LinkedIn URL, portfolio URL.
+
+Layout and length:
+- The CV must fit on exactly one page.
+- You decide the layout, section order, and bullet distribution. Balance bullets across sections so the page holds together visually and stays on one page.
+
+For the French version specifically:
+- Avoid English terms when a commonly used French equivalent exists in the Belgian tech market.
+- Keep English terms only when the French equivalent is not used in practice (e.g. "fullstack").
+
+The final CV should present me as a junior software developer who is genuinely interested in AI, modern stacks, and new technologies, and who is looking for a first full-time role.
+</context>
+
+<task>
+1. Build the new CV in English, applying all the points above.
+2. Once I confirm the English version is finalised, build the French version from my French CV using the same structure and decisions.
+
+Once I approve your final answer, output a summary for this step with three fields:
+- Problem: what was the problem this prompt addressed.
+- Solution: the final solution I chose.
+- Decisions: why I chose this solution, and which alternatives were dropped and why.
+</task>
+
+<prompt_1_result></prompt_1_result>
+<prompt_2_result></prompt_2_result>
+<prompt_3_A_result></prompt_3_A_result>
+<prompt_3_B_result></prompt_3_B_result>
+<prompt_3_C_result></prompt_3_C_result>
+
+</prompt_4>
+
+<prompt_5>
+<role>Act as an ATS parsing engine and an experienced technical recruiter combined. Be direct and critical — do not soften feedback.</role>
+
+<context>
+I am a junior software developer. I am attaching TWO versions of my CV:
+- A French version (CV_FR)
+- An English version (CV_EN)
+
+Both versions should communicate the same profile but are tailored for different markets. I want to know whether an ATS would parse each one cleanly, and whether a recruiter scanning the parsed output would still see a strong candidate. I also want to know whether the two versions are consistent with each other.
+</context>
+
+<task>
+For EACH CV (FR and EN), perform the following steps separately:
+
+1. Simulate what an ATS would extract from this CV. Output the parsed result as plain structured text (sections, fields, bullets). Label clearly which version you are parsing.
+
+2. Flag anything that would not parse cleanly or would be misread by an ATS. Pay special attention to language-specific issues:
+   - For the French CV: accented characters (é, è, à, ç…), French section headers ("Expérience", "Formation", "Compétences"), date formats (jj/mm/aaaa), and any anglicisms that may confuse a French-tuned ATS.
+   - For the English CV: section headers, US/UK date formats, action verbs, and any French residue (untranslated terms, French punctuation spacing, etc.).
+
+3. Looking at the parsed output only — not the original — tell me whether a recruiter would still see a strong junior developer profile. Be critical. Do this for each version, considering the target market (francophone vs anglophone recruiter).
+
+Then, perform a CROSS-VERSION comparison:
+
+4. Identify any inconsistencies between the two CVs (different job titles, mismatched dates, skills present in one but missing in the other, different tone or seniority signals, etc.). Flag anything that would look suspicious if a recruiter saw both.
+
+5. State which version is stronger and why, and what should be aligned.
+
+Once I approve your final answer, output a summary for this step with three fields:
+- Problem: what was the problem this prompt addressed.
+- Solution: the final solution I chose.
+- Decisions: why I chose this solution, and which alternatives were dropped and why.
+</task>
+
+<output_format>
+Structure your response with clear headers:
+## ATS Parse — CV_FR
+## ATS Parse — CV_EN
+## Cross-version comparison
+## Verdict
+</output_format>
+</prompt_5>
+
+
+<prompt_6>
+<role>Act as a project reviewer summarising a multi-step decision process. Be concise and direct.</role>
+
+<context>
+I went through a multi-prompt workflow to rebuild my CV. Below are the per-step Problem / Solution / Decisions summaries already produced at the end of each prompt:
+
+- Prompt 1 (tool selection): {summary_prompt_1}
+- Prompt 2 (CV audit): {summary_prompt_2}
+- Prompt 3a (Skilljar courses): {summary_prompt_3a}
+- Prompt 3b (profile summary): {summary_prompt_3b}
+- Prompt 3c (internship rewrite): {summary_prompt_3c}
+- Prompt 4 (final CV, EN and FR): {summary_prompt_4}
+- Prompt 5 (ATS check): {summary_prompt_5}
+</context>
+
+<task>
+For each step, produce one row in a table with these columns:
+| Step | Problem | Solution | Decisions |
+
+Then, in 5 sentences, summarise the overall transformation from old CV to new CV.
+</task>
+</prompt_6>
